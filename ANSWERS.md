@@ -22,6 +22,8 @@ I passed in `trainer_path(current_trainer())`. `resources :trainers` in config/r
 
 # Question 5: Explain how putting this line "flash[:error] = @pokemon.errors.full_messages.to_sentence" shows error messages on your form.
 
+This is because of the simple_form_for gem. The form expects a `flash` hash with symbol `:error`, and when it finds one, it displays it in the form. As far as retrieving the error itself, we passed in `@pokemon` to the form initially, which it then passes out as a parameter, so we can retrieve any sort of error the form receives.
+
 # Give us feedback on the project and decal below!
 
 # Extra credit: Link your Heroku deployed app

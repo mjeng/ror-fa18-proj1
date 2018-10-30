@@ -7,3 +7,5 @@
   <p>name: <%= p.name %> | level: <%= p.level %> | health: <%= p.health %></p>
   <%= button_to "Damage!", damage_path(id: p), :class => "button medium", :method => :patch %>
 <% end %>
+<br>
+<%= button_to "New Pokemon", pokemons_path, :class => "button medium", :method => :get %>
