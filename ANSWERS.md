@@ -18,6 +18,8 @@ Pikanite ᕕ( ᐛ )ᕗ
 
 # Question 4: What did you pass into the redirect_to? If it is a path, what did that path need? If it is not a path, why is it okay not to have a path here?
 
+I passed in `trainer_path(current_trainer())`. `resources :trainers` in config/routes.rb automatically sets a prefix `trainer` so that we can call `trainer_path` with a specific trainer object to get the path to that resource. Since `redirect_to` automatically issues a GET request to the specified path, the function redirects correctly. Also we use the `current_trainer()` Devise built-in to pull out our user as a trainer object, which is exactly what `trainer_path` takes in as a parameter.
+
 # Question 5: Explain how putting this line "flash[:error] = @pokemon.errors.full_messages.to_sentence" shows error messages on your form.
 
 # Give us feedback on the project and decal below!

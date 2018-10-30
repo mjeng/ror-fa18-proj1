@@ -4,5 +4,6 @@
 <p>POKEMON:</p>
 <% @trainer.pokemons.each do |p| %>
   <%= image_tag("pokemon/#{p.ndex}.png", alt: "pokemon") %>
-  <p>name: <%= p.name %> | level: <%= p.level %></p>
+  <p>name: <%= p.name %> | level: <%= p.level %> | health: <%= p.health %></p>
+  <%= button_to "Damage!", damage_path(id: p), :class => "button medium", :method => :patch %>
 <% end %>
