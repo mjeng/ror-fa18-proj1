@@ -28,4 +28,5 @@ This is because of the simple_form_for gem. The form expects a `flash` hash with
 
 # Extra credit: Link your Heroku deployed app
 
-https://matts-pokeportal.herokuapp.com/
+Project URL: https://github.com/mjeng/ror-fa18-proj1
+Heroku URL: https://matts-pokeportal.herokuapp.com/
